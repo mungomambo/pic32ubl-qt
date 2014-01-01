@@ -72,6 +72,7 @@ public:
         if (!initialized)
         {
             timer.start();
+            initialized = TRUE;
         }
         return timer.elapsed();
     }
