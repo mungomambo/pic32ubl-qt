@@ -152,7 +152,7 @@ unsigned short CHexManager::ConvertAsciiToHex(void *VdAscii, void *VdHexRec)
     {
         temp[2] = Ascii[i++];
         temp[3] = Ascii[i++];
-        if((temp[2] == 0) || (temp[3] == 0))
+        if((temp[2] == 0) || (temp[2] == '\r') || (temp[3] == 0))
         {
             // Not a valid ASCII. Stop conversion and break.
             i -= 2;
